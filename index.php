@@ -17,7 +17,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>留言板</title>
+  <title>傷心小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="modal.css">
@@ -37,7 +37,7 @@
         <a class="form__button" href="admin.php">管理頁面</a>
       <?php } ?>
     <?php } ?>
-    <h1 class="board__title">Comments</h1>
+    <h1 class="board__title">傷心小站</h1>
     <?php 
       if (is_set('errCode','get')) {
         $code = $_GET['errCode'];
