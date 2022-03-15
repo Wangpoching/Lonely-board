@@ -20,10 +20,11 @@
 
   // 檢查各類權限 
   function has_permission($username, $action) {
-    if (getdata_from_username($username)['identity'] === 1) {
+    $user_data = getdata_from_username($username);
+    if ($user_data['identity'] === 1) {
       return True;
     } else {
-      return getdata_from_username($username)[$action] === 1;
+      return $user_data[$action] === 1;
     }
   }
 

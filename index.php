@@ -19,6 +19,7 @@
   <meta charset="utf-8">
   <title>傷心小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="modal.css">
 </head>
@@ -50,7 +51,7 @@
     ?>
     <form class="form" method="POST" action="handle_add_comment.php">
       <?php if (isset($nickname)) { ?>
-        <div class="nickname__container">
+        <div class="notify__container">
           <?php if (has_permission($username, 'addable')) { ?>
             <span><strong><?php echo escape($nickname); ?></strong> 想說些甚麼…</span>
           <?php }  else { ?>
@@ -173,11 +174,11 @@
     ?>
     <form class="form" method="POST" action="handle_login.php">
       <div class="username__container">
-        <span>帳號：</span>
+        <div>帳號：</div>
         <input class="username__input" type="text" name="username" placeholder="輸入帳號"/>
       </div>
       <div class="password__container">
-        <span>密碼：</span>
+        <div>密碼：</div>
         <input class="password__input" type="password" name="password" placeholder="輸入密碼"/>
       </div>
       <button class="form__button">送出</button>
@@ -200,15 +201,15 @@
     ?>
     <form class="form" method="POST" action="handle_register.php">
       <div class="nickname__container">
-        <span>暱稱：</span>
+        <div>暱稱：</div>
         <input class="nickname__input" type="text" name="nickname" placeholder="你的暱稱"/>
       </div>
       <div class="username__container">
-        <span>帳號：</span>
+        <div>帳號：</div>
         <input class="username__input" type="text" name="username" placeholder="輸入帳號"/>
       </div>
       <div class="password__container">
-        <span>密碼：</span>
+        <div>密碼：</div>
         <input class="password__input" type="password" name="password" placeholder="輸入密碼"/>
       </div>
       <button class="form__button">送出</button>
@@ -233,15 +234,15 @@
     ?>
     <form class="form" method="POST" action="handle_alter_nickname.php">
       <div class="username__container">
-        <span>帳號：</span>
+        <div>帳號：</div>
         <input class="username__input" type="text" name="username" placeholder="輸入帳號"/>
       </div>
       <div class="password__container">
-        <span>密碼：</span>
+        <div>密碼：</div>
         <input class="password__input" type="password" name="password" placeholder="輸入密碼"/>
       </div>
       <div class="changed-nickname__container">
-        <span>新的暱稱：</span>
+        <div>新的暱稱：</div>
         <input class="changed-nickname__input" type="text" name="changed_nickname" placeholder="輸入新的暱稱"/>
       </div>
       <button class="form__button" value="送出">送出</button>

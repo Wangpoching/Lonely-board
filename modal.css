@@ -1,5 +1,7 @@
 body {
 	background: #f7f7f7;
+	font-family: "Noto Sans TC", Open-Sans, Arial;
+  	font-weight: 400;
 }
 
 .warning {
@@ -64,6 +66,10 @@ body {
 	border-radius: 5px;
 }
 
+.notify__container {
+	margin-bottom: 10px;
+}
+
 .login__board,.register__board,.alter-nickname__board {
 	text-align: center;
 	position: fixed;
@@ -80,11 +86,19 @@ body {
 
 
 .nickname__container, .username__container, .password__container, .changed-nickname__container {
+	display: flex;
 	margin-bottom: 10px;
 }
 
+.nickname__container > div:first-child,
+.username__container > div:first-child, 
+.password__container > div:first-child, 
+.changed-nickname__container > div:first-child {
+	flex-basis: 100px;
+	text-align: right;
+}
+
 .nickname__input, .username__input, .password__input, .changed-nickname__input {
-	flex-basis: 500px;
 	padding: 10px;
 	border: 1px solid #c2dffb;
 	box-sizing: border-box;	
@@ -103,6 +117,7 @@ body {
 }
 
 .form__button {
+	display: inline-block;
 	box-sizing: border-box;
 	text-decoration:none;
 	height: 40px;
@@ -242,5 +257,24 @@ ul.pagination li a.active {
 
 ul.pagination li a:hover:not(.active) { 
 	background-color: #ddd; 
+}
+
+@media screen and (max-width: 720px) {
+	.nickname__container, .username__container, .password__container, .changed-nickname__container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.nickname__container > div:first-child,
+	.username__container > div:first-child, 
+	.password__container > div:first-child, 
+	.changed-nickname__container > div:first-child {
+		flex-basis: auto;
+		text-align: center;
+	}
+
+	.nickname__input, .username__input, .password__input, .changed-nickname__input {
+		margin-top: 5px;
+	}
 }
 

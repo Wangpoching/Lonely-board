@@ -4,8 +4,7 @@
   require_once('utils.php');
   
   // 沒有輸入值（type 1 error)
-  if (!is_set('content','post')) {
-    if (!is_set('id','post')) {
+  if (!is_set('content','post') || !is_set('id','post')) {
       die('failed');
     } else {
       header('Location:update_comment.php?errCode=1&id='.$_POST['id']);

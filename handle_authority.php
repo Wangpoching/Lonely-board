@@ -23,7 +23,12 @@
   $editable = intval($_POST['editable']);
   $deletable = intval($_POST['deletable']);
   $addable = intval($_POST['addable']);
-  $identity = intval($_POST['identity']);  
+  $identity = intval($_POST['identity']);
+  if ($identity === 1) {
+     $editable = 1;
+     $deletable = 1;
+     $addable = 1;
+  }
   $sql = 'UPDATE boching_board_comment_users SET editable=?, deletable=?, addable=?, identity=? WHERE id=?';
   $stmt = $conn->prepare($sql);
   $stmt->bind_param('iiiii', $editable, $deletable, $addable, $identity, $id);

@@ -87,21 +87,21 @@
               <td class="edit-sample sample">
                 <select name="editable">
                   <?php 
-                    echo $row['editable'] === 1 ? '<option value="1" selected>開啟</option><option value="0">關閉</option>' : '<option value="1">開啟</option><option value="0" selected>關閉</option>';
+                    echo $row['editable'] === 1 || $row['identity'] === 1 ? '<option value="1" selected>開啟</option><option value="0">關閉</option>' : '<option value="1">開啟</option><option value="0" selected>關閉</option>';
                   ?>
                 </select>
               </td>
               <td class="deletable-sample sample">
                 <select name="deletable">
                   <?php 
-                    echo $row['deletable'] === 1 ? '<option value="1" selected>開啟</option><option value="0">關閉</option>' : '<option value="1">開啟</option><option value="0" selected>關閉</option>';
+                    echo $row['deletable'] === 1 || $row['identity'] === 1 ? '<option value="1" selected>開啟</option><option value="0">關閉</option>' : '<option value="1">開啟</option><option value="0" selected>關閉</option>';
                   ?>
                 </select>
               </td>
               <td class="addable-sample sample">
                 <select  name="addable">
                   <?php 
-                    echo $row['addable'] === 1 ? '<option value="1" selected>開啟</option><option value="0">關閉</option>' : '<option value="1">開啟</option><option value="0" selected>關閉</option>';
+                    echo $row['addable'] === 1 || $row['identity'] === 1 ? '<option value="1" selected>開啟</option><option value="0">關閉</option>' : '<option value="1">開啟</option><option value="0" selected>關閉</option>';
                   ?>
                 </select>
               </td>

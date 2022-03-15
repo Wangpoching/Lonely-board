@@ -6,9 +6,9 @@
   if (!is_set('id','post') || !is_set('csrf-token','post')) {
     header('Location:index.php');
     die('failed');
-  } else {
-    $id = intval($_POST['id']);
   }
+  
+  $id = intval($_POST['id']);
 
   // 檢查是不是有登錄過了
   check_login();
